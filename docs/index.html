@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="output.css" />
+    <title>TranslateApp</title>
+  </head>
+  <body>
+    <button
+      id="theme-toggle"
+      class="sunMoon text-text-color bg-light-bg-color dark:bg-[#363638] dark:text-light-text-color fixed z-30 top-0 right-0 m-5 flex items-center justify-center w-8 h-8 rounded-full"
+    >
+      <ion-icon class="moon text-xl" name="moon-outline"></ion-icon>
+      <ion-icon class="sun text-xl" name="sunny-outline"></ion-icon>
+    </button>
+    <div class="container-1">
+      <div class="card input-wrapper">
+        <div class="form">
+          <span class="heading">From : </span>
+          <div class="dropdown-container" id="input-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="earth-outline"></ion-icon>
+              <span class="selected" data-value="auto">Auto Detect</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="option active">Option 1</li>
+              <li class="option">Option 2</li>
+              <li class="option">Option 3</li>
+              <li class="option">Option 4</li>
+              <li class="option">Option 5</li>
+              <li class="option">Option 6</li>
+              <li class="option">Option 7</li>
+              <li class="option">Option 8</li>
+              <li class="option">Option 9</li>
+              <li class="option">Option 10</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-area">
+          <textarea
+            id="input-text"
+            class="placeholder:text-xl dark:placeholder:text-white font-semibold"
+            placeholder="Enter your text here"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="chars"><span id="input-chars">0</span> / 5000</div>
+        </div>
+        <div class="card-bottom">
+          <p>Or choose your document</p>
+          <label for="upload-document">
+            <span id="upload-title">Choose File</span>
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+            <input type="file" id="upload-document" hidden />
+          </label>
+        </div>
+      </div>
+      <div class="center relative">
+        <div
+          class="swap-position flex items-center justify-center absolute rotate-90 md:rotate-0 top-[-20px] md:top-[30px] left-1/2 -translate-x-1/2 w-[50px] h-[50px] rounded-full bg-primary-color cursor-pointer transition-all duration-300 text-primary-text-color hover:scale-110"
+        >
+          <ion-icon class="text-xl" name="swap-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="card output-wrapper">
+        <div class="to">
+          <span class="heading">to : </span>
+          <div class="dropdown-container" id="output-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="earth-outline"></ion-icon>
+              <span class="selected" data-value="en">English (English)</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="option active">Option 1</li>
+              <li class="option">Option 2</li>
+              <li class="option">Option 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-area">
+          <textarea
+            class="placeholder:text-xl dark:placeholder:text-white font-semibold"
+            id="output-text"
+            placeholder="Translated text will appear here..."
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="card-bottom">
+          <p>Or download a document</p>
+          <button id="download-document">
+            <span>download</span>
+            <ion-icon name="cloud-download-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./languges.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

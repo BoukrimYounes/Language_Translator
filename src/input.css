@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-none {
+  @apply hidden;
+}
+
+body {
+  @apply min-h-screen flex items-center justify-center text-text-color bg-bg-color dark:bg-text-color;
+}
+
+.container-1 {
+  @apply flex flex-col gap-10 m-6 md:m-0 w-full px-10 md:px-20 md:relative md:flex md:flex-row md:gap-8;
+}
+
+.container-1 .card {
+  @apply relative flex-1 p-[30px] rounded-2xl bg-light-bg-color dark:bg-[#363638];
+}
+
+.card .form,
+.card .to {
+  @apply flex flex-col lg:flex-row items-center gap-5;
+}
+
+.card .heading {
+  @apply text-sm font-semibold text-light-text-color whitespace-nowrap;
+}
+
+.dropdown-container {
+  @apply w-full mb-2.5 relative;
+}
+
+.dropdown-container .dropdown-toggle {
+  @apply flex items-center py-4 px-5 rounded-[30px] bg-bg-color dark:bg-[#848484] cursor-pointer transition-all duration-300;
+}
+
+.dropdown-container .dropdown-toggle span {
+  @apply flex-1 ml-2.5 pb-0.5 dark:text-white text-lg font-medium;
+}
+
+.dropdown-container .dropdown-toggle ion-icon {
+  @apply text-2xl dark:text-white transition-transform duration-300 ease-linear;
+}
+
+.dropdown-container.active .dropdown-toggle {
+  /* border-radius: 20px 20px 0 0; */
+  @apply rounded-b-none;
+}
+
+.dropdown-container .dropdown-menu {
+  @apply absolute hidden top-full left-0 w-full h-[300px] overflow-auto py-5 px-1 z-10 flex-col bg-bg-color dark:bg-[#848484] transition-all duration-300 rounded-b-[30px] rounded-t-none;
+}
+
+.dropdown-container .dropdown-menu::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.dropdown-container.active .dropdown-menu {
+  @apply flex;
+}
+
+.dropdown-container.active .dropdown-menu li {
+  @apply px-2 py-2.5 dark:text-white text-lg capitalize font-medium cursor-pointer rounded-[15px] mb-2.5 border-b border-light-bg-color dark:border-none transition-all duration-300;
+}
+
+.dropdown-container.active .dropdown-menu li.active {
+  @apply text-primary-text-color bg-primary-color;
+}
+
+.dropdown-container.active .dropdown-menu li:not(.active):hover {
+  @apply text-primary-text-color bg-primary-color;
+}
+
+.container-1 .text-area {
+  @apply relative;
+}
+
+.container-1 .text-area textarea {
+  @apply w-full border-none outline-none resize-none bg-transparent py-2.5 px-5 my-2.5 text-text-color dark:text-primary-text-color text-xl overflow-hidden;
+}
+
+.container-1 .text-area .chars {
+  @apply absolute bottom-0 right-0 pb-2.5 text-sm text-light-text-color;
+}
+
+.card-bottom {
+  @apply flex items-center flex-col justify-center pt-5 border-t-2 border-t-bg-color;
+}
+
+.card-bottom p {
+  @apply mb-5 font-semibold dark:text-white;
+}
+
+.card-bottom label,
+#download-document {
+  @apply bg-bg-color hover:bg-primary-color hover:text-primary-text-color py-2 px-8 flex items-center gap-2 rounded-full cursor-pointer;
+}
+
+.card-bottom span {
+  @apply text-xs pointer-events-none pb-0.5;
+}
+
+.card-bottom ion-icon {
+  @apply text-xl;
+}
